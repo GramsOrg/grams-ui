@@ -5,7 +5,7 @@ import { action } from "@storybook/addon-actions";
 import ColorButton from './ColorButton.tsx';
 
 export default {
-  title: 'ColorButton',
+  title: 'General/ColorButton',
   component: ColorButton,
 };
 

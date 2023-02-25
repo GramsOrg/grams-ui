@@ -1,0 +1,13 @@
+.avatar {
+    margin-bottom: 0.3em;
+}
+
+.centered {
+    text-align: center;
+    width: 100%;
+    align-items: center;
+}
+
+.top {
+    vertical-align: top;
+}

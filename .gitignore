@@ -12,6 +12,7 @@
 /build
 /out
 /dist
+/storybook-static
 *-database
 *.stronghold
 

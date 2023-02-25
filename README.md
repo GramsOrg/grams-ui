@@ -115,6 +115,12 @@ npm run lint
 
 This will use TSLint to check the code for any style or syntax errors.
 
+## Dependencies
+
+* react
+* semantic-ui
+* react-avatar
+
 ## License
 
 This project is licensed under the Apache-2.0 License. See the LICENSE file for details.
