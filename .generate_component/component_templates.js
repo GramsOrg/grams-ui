@@ -45,7 +45,7 @@ export default {
   }
 };
 
-const Template = ({dir, mode, ...props}) => {
+const Template = ({dir, ...props}) => {
   return (
     <${name}
       dir={dir}
