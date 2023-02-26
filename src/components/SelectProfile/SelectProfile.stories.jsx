@@ -2,11 +2,11 @@ import React from 'react';
 
 import { action } from "@storybook/addon-actions";
 
-import ProfileSelector from './ProfileSelector.tsx';
+import SelectProfile from './SelectProfile.tsx';
 
 export default {
-  title: 'Auth/ProfileSelector',
-  component: ProfileSelector,
+  title: 'Auth/SelectProfile',
+  component: SelectProfile,
   parameters: {
     componentSubtitle: 'Displays a list of profiles with an option to create a new profile',
     storyshots: { disable: false },
@@ -14,14 +14,18 @@ export default {
   argTypes: {
     dir: {
       control: 'radio',
+      defaultValue: 'ltr',
       options: ['ltr', 'rtl']
+    },
+    horizontal: {
+      control: 'boolean'
     }
   }
 };
 
 const Template = ({dir, ...props}) => {
   return (
-    <ProfileSelector
+    <SelectProfile
       dir={dir}
       {...props}
       onCreate={action("Trigger onCreate()")}
@@ -29,10 +33,8 @@ const Template = ({dir, ...props}) => {
   );
 };
 
-export const Default = () => <ProfileSelector />;
-
-export const Sandbox = Template.bind({});
-Sandbox.args = {
+export const Default = Template.bind({});
+Default.args = {
   dir: 'ltr'
 }
 
@@ -51,5 +53,22 @@ const profiles = [
 export const Populated = Template.bind({});
 Populated.args = {
   dir: 'ltr',
-  profiles: profiles
+  profiles: profiles,
+  onSelect: action("Trigger onSelect()")
+}
+
+export const Horizontal = Template.bind({});
+Horizontal.args = {
+  dir: 'ltr',
+  horizontal: true,
+  profiles: profiles,
+  onSelect: action("Trigger onSelect()")
+}
+
+export const RTL = Template.bind({});
+RTL.args = {
+  dir: 'rtl',
+  horizontal: true,
+  profiles: profiles,
+  onSelect: action("Trigger onSelect()")
 }

@@ -1,4 +1,7 @@
-import ColorButton from './components/ColorButton';
-import ProfileSelector from './components/ProfileSelector';
+import SelectLocale from './components/SelectLocale';
+import SelectProfile from './components/SelectProfile';
 
-export { ColorButton, ProfileSelector };
+export {
+  SelectLocale,
+  SelectProfile,
+};

@@ -9,5 +9,8 @@ module.exports = {
       '@storybook/addon-docs',
       '@storybook/addon-storysource',
       '@storybook/addon-controls'
-    ]
+    ],
+    "features": {
+      storyStoreV7: true
+    }
 }

@@ -5,27 +5,47 @@ import { Profile } from 'grams-common';
 import { Label, List } from 'semantic-ui-react';
 import Avatar from 'react-avatar';
 
-import './ProfileSelector.css';
+import './SelectProfile.css';
 
 export interface IProfileItemsProps {
   profiles?: Profile[];
   onSelect?: (profile: Profile) => void;
 }
 
-export interface IProfileSelectorProps {
+export interface ISelectProfileProps {
+
+  /**
+   * Defines the direction of the component
+   */
   dir?: string;
+
+  /**
+   * List of profiles that will be displayed
+   */
   profiles?: Profile[];
+
+  /**
+   * Triggers on user clicking the create button
+   */
   onCreate?: () => void;
+
+  /**
+   * Triggers on user clicking on a profile
+   */
   onSelect?: (profile: Profile) => void;
+
+  /**
+   * Toggles between displaying the profiles horizontally or vertically
+   */
   horizontal?: boolean;
 }
 
-const ProfileSelector = (props: IProfileSelectorProps) => {
-  props = {
-    dir: 'ltr',
-    horizontal: false,
-    ...props
-  }
+const defaultProps = {
+  dir: 'ltr',
+  horizontal: false
+};
+
+const SelectProfile = (props: ISelectProfileProps) => {
 
   return (
     <List
@@ -83,4 +103,6 @@ const ProfileItems = (props: IProfileItemsProps) => {
   )
 }
 
-export default ProfileSelector;
+SelectProfile.defaultProps = defaultProps;
+
+export default SelectProfile;

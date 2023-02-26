@@ -6,11 +6,11 @@ import React from 'react';
 import { describe, expect, test } from '@jest/globals';
 import { render } from '@testing-library/react';
 
-import ProfileSelector from './ProfileSelector';
+import SelectProfile from './SelectProfile';
 
-describe('ProfileSelector Component', () => {
+describe('SelectProfile Component', () => {
   test('it should match the snapshot', () => {
-    const { asFragment } = render(<ProfileSelector />);
+    const { asFragment } = render(<SelectProfile />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

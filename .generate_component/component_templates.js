@@ -4,21 +4,32 @@ exports.component = name => `import React from 'react';
 import './${name}.css';
 
 export interface I${name}Props {
+
+  /**
+   * Defines the direction of the component
+   */
   dir?: string;
+
+  /**
+   * Toggles between light and dark modes
+   */
+  inverted?: boolean;
 }
 
+const defaultProps = {
+  dir: 'ltr',
+  inverted: false
+};
+
 const ${name} = (props: I${name}Props) => {
-  props = {
-    dir: 'ltr',
-    // set defaults here
-    ...props
-  }
 
   return (
     <>
     </>
   );
 };
+
+${name}.defaultProps = defaultProps;
 
 export default ${name};
 `;
@@ -41,24 +52,33 @@ export default {
     dir: {
       control: 'radio',
       options: ['ltr', 'rtl']
+    },
+    inverted: {
+      control: 'boolean'
     }
   }
 };
 
-const Template = ({dir, ...props}) => {
+const Template = ({dir, inverted, ...props}) => {
   return (
     <${name}
       dir={dir}
+      inverted={inverted}
       {...props}
     />
   );
 };
 
-export const Default = () => <${name} />;
+export const Default = Template.bind({});
+Default.args = {
+  dir: 'ltr',
+  inverted: false
+}
 
-export const Sandbox = Template.bind({});
-Sandbox.args = {
-  dir: 'ltr'
+export const RTL = Template.bind({});
+RTL.args = {
+  dir: 'rtl',
+  inverted: false
 }
 `;
 
