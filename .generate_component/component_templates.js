@@ -2,15 +2,14 @@
 exports.component = name => `import React from 'react';
 
 import './${name}.css';
-import { DefaultTheme, Theme } from '../../types/Theme';
 
 export interface I${name}Props {
-  theme?: Theme;
+  dir?: string;
 }
 
 const ${name} = (props: I${name}Props) => {
   props = {
-    theme: DefaultTheme,
+    dir: 'ltr',
     // set defaults here
     ...props
   }
@@ -29,8 +28,6 @@ exports.story = name => `import React from 'react';
 
 import { action } from "@storybook/addon-actions";
 
-import { Mode } from '../../types/Theme';
-
 import ${name} from './${name}.tsx';
 
 export default {
@@ -41,16 +38,9 @@ export default {
     storyshots: { disable: false },
   },
   argTypes: {
-    theme: {
-      control: false
-    },
     dir: {
       control: 'radio',
-      options: ['Left', 'Right']
-    },
-    mode: {
-      control: 'radio',
-      options: ['Light', 'Dark']
+      options: ['ltr', 'rtl']
     }
   }
 };
@@ -58,10 +48,7 @@ export default {
 const Template = ({dir, mode, ...props}) => {
   return (
     <${name}
-      theme={{
-        dir: dir === 'Left' ? 'ltr': 'rtl',
-        mode: mode === 'Light' ? Mode.Light : Mode.Dark
-      }}
+      dir={dir}
       {...props}
     />
   );
@@ -71,8 +58,7 @@ export const Default = () => <${name} />;
 
 export const Sandbox = Template.bind({});
 Sandbox.args = {
-  dir: 'Left',
-  mode: 'Light'
+  dir: 'ltr'
 }
 `;
 

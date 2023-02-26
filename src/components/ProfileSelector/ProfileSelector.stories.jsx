@@ -2,8 +2,6 @@ import React from 'react';
 
 import { action } from "@storybook/addon-actions";
 
-import { Mode } from '../../types/Theme';
-
 import ProfileSelector from './ProfileSelector.tsx';
 
 export default {
@@ -14,27 +12,17 @@ export default {
     storyshots: { disable: false },
   },
   argTypes: {
-    theme: {
-      control: false
-    },
     dir: {
       control: 'radio',
-      options: ['Left', 'Right']
-    },
-    mode: {
-      control: 'radio',
-      options: ['Light', 'Dark']
+      options: ['ltr', 'rtl']
     }
   }
 };
 
-const Template = ({dir, mode, ...props}) => {
+const Template = ({dir, ...props}) => {
   return (
     <ProfileSelector
-      theme={{
-        dir: dir === 'Left' ? 'ltr': 'rtl',
-        mode: mode === 'Light' ? Mode.Light : Mode.Dark
-      }}
+      dir={dir}
       {...props}
       onCreate={action("Trigger onCreate()")}
     />
@@ -45,8 +33,7 @@ export const Default = () => <ProfileSelector />;
 
 export const Sandbox = Template.bind({});
 Sandbox.args = {
-  dir: 'Left',
-  mode: 'Light'
+  dir: 'ltr'
 }
 
 const profiles = [
@@ -63,7 +50,6 @@ const profiles = [
 
 export const Populated = Template.bind({});
 Populated.args = {
-  dir: 'Left',
-  mode: 'Light',
+  dir: 'ltr',
   profiles: profiles
 }

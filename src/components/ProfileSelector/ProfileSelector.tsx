@@ -6,7 +6,6 @@ import { Label, List } from 'semantic-ui-react';
 import Avatar from 'react-avatar';
 
 import './ProfileSelector.css';
-import { DefaultTheme, Theme, Mode } from '../../types/Theme';
 
 export interface IProfileItemsProps {
   profiles?: Profile[];
@@ -14,16 +13,16 @@ export interface IProfileItemsProps {
 }
 
 export interface IProfileSelectorProps {
+  dir?: string;
   profiles?: Profile[];
   onCreate?: () => void;
   onSelect?: (profile: Profile) => void;
   horizontal?: boolean;
-  theme?: Theme;
 }
 
 const ProfileSelector = (props: IProfileSelectorProps) => {
   props = {
-    theme: DefaultTheme,
+    dir: 'ltr',
     horizontal: false,
     ...props
   }
@@ -34,7 +33,7 @@ const ProfileSelector = (props: IProfileSelectorProps) => {
       relaxed
       size="big"
       className="centered top"
-      dir={ props?.theme?.dir }
+      dir={ props?.dir }
     >
       <ProfileItems
         profiles={props?.profiles}
@@ -45,7 +44,7 @@ const ProfileSelector = (props: IProfileSelectorProps) => {
           name="+"
           size="64"
           round
-          color={props?.theme?.mode === Mode.Light ? 'teal' : 'gray'}
+          color='teal'
           title="New"
           className="avatar"
         />
