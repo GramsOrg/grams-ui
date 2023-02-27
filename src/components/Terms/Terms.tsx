@@ -60,7 +60,7 @@ const defaultProps = {
 
 const Terms = (props: ITermsProps) => {
 
-  const [checked, setChecked] = useState<boolean>(props.defaultChecked || false);
+  const [accepted, setAccepted] = useState<boolean>(props.defaultChecked || false);
 
   const markdown: string = props.content || '';
 
@@ -72,15 +72,15 @@ const Terms = (props: ITermsProps) => {
       <Segment basic>
         <Checkbox
           label={props.checkboxLabel}
-          checked={checked}
-          onChange={(e, { checked }) => setChecked(!!checked)}
+          checked={accepted}
+          onChange={(e, { checked }) => setAccepted(!!checked)}
         />
       </Segment>
       <Button
         primary
         fluid
         dir={props.dir}
-        disabled={!checked}
+        disabled={!accepted}
         onClick={() => props?.onAccept?.()}
       >
         {props.confirmLabel}
