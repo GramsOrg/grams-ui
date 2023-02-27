@@ -1,0 +1,16 @@
+.scrollable {
+    overflow-y: scroll;
+    margin-bottom: 1em;
+}
+
+.small {
+    height: 200px;
+}
+
+.medium {
+    height: 400px;
+}
+
+.large {
+    height: 600px;
+}

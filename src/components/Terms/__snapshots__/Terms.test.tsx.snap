@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Terms Component it should match the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    dir="ltr"
+  >
+    <div
+      class="scrollable medium"
+    />
+    <div
+      class="ui basic segment"
+    >
+      <div
+        class="ui checkbox"
+      >
+        <input
+          class="hidden"
+          readonly=""
+          tabindex="0"
+          type="checkbox"
+          value=""
+        />
+        <label>
+          I accept the terms and conditions
+        </label>
+      </div>
+    </div>
+    <button
+      class="ui fluid primary disabled button"
+      dir="ltr"
+      disabled=""
+      tabindex="-1"
+    >
+      Accept
+    </button>
+  </div>
+</DocumentFragment>
+`;

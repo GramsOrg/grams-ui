@@ -8,7 +8,7 @@ export default {
   title: 'Onboarding/SelectLocale',
   component: SelectLocale,
   parameters: {
-    componentSubtitle: 'Component description',
+    componentSubtitle: 'Allows the user to select and confirm their locale',
     storyshots: { disable: false },
   },
   argTypes: {

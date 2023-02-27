@@ -7,7 +7,9 @@
   "scripts": {
     "build": "tsc",
     "build:storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider build-storybook",
-    "build:all": "npm run build && npm run build:storybook",
+    "build:all": "npm run build && npm run build:storybook&& npm run prepublishOnly",
+    "build:prod": "rm -rf dist && npm run build:all",
+    "build:prod:windows": "rd /s /q dist && npm run build:all",
     "test": "jest -u --config jestconfig.json",
     "generate": "node .generate_component",
     "storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 9009 -s public",
@@ -70,6 +72,7 @@
   "dependencies": {
     "grams-common": "^0.1.6",
     "react-avatar": "^5.0.3",
+    "react-markdown": "^8.0.5",
     "semantic-ui-react": "^2.1.4"
   }
 }

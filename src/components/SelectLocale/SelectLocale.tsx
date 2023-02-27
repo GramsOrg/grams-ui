@@ -105,7 +105,6 @@ const SelectLocale = (props: ISelectLocaleProps) => {
             inverted={props.inverted}
             primary={!props.inverted}
             fluid={props.fluid}
-            size="large"
             onClick={() => props?.onSelect?.(selected) }
           >
             {props.confirmLabel}

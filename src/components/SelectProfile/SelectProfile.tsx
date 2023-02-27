@@ -17,7 +17,7 @@ export interface ISelectProfileProps {
   /**
    * Defines the direction of the component
    */
-  dir?: string;
+  dir?: 'ltr' | 'rtl';
 
   /**
    * List of profiles that will be displayed

@@ -8,7 +8,7 @@ export interface I${name}Props {
   /**
    * Defines the direction of the component
    */
-  dir?: string;
+  dir?: 'ltr' | 'rtl';
 
   /**
    * Toggles between light and dark modes
