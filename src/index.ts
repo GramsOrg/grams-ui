@@ -1,13 +1,17 @@
 import CreateProfile from './components/CreateProfile';
-import CreateProfileOptions from './components/CreateProfileOptions';
+import GramsIcon from './components/GramsIcon';
+import ProfileSeed from './components/ProfileSeed';
 import SelectLocale from './components/SelectLocale';
 import SelectProfile from './components/SelectProfile';
+import SelectionList from './components/SelectionList';
 import Terms from './components/Terms';
 
 export {
   CreateProfile,
-  CreateProfileOptions,
+  GramsIcon,
+  ProfileSeed,
   SelectLocale,
   SelectProfile,
+  SelectionList,
   Terms,
 };

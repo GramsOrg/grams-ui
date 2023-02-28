@@ -2,11 +2,11 @@ import React from 'react';
 
 import { action } from "@storybook/addon-actions";
 
-import CreateProfileOptions from './CreateProfileOptions.tsx';
+import GramsIcon from './GramsIcon.tsx';
 
 export default {
-  title: 'Onboarding/CreateProfileOptions',
-  component: CreateProfileOptions,
+  title: 'General/GramsIcon',
+  component: GramsIcon,
   parameters: {
     componentSubtitle: 'Component description',
     storyshots: { disable: false },
@@ -24,7 +24,7 @@ export default {
 
 const Template = ({dir, inverted, ...props}) => {
   return (
-    <CreateProfileOptions
+    <GramsIcon
       dir={dir}
       inverted={inverted}
       {...props}
@@ -35,11 +35,13 @@ const Template = ({dir, inverted, ...props}) => {
 export const Default = Template.bind({});
 Default.args = {
   dir: 'ltr',
-  inverted: false
+  inverted: false,
+  name: 'world'
 }
 
 export const RTL = Template.bind({});
 RTL.args = {
   dir: 'rtl',
-  inverted: false
+  inverted: false,
+  name: 'user'
 }

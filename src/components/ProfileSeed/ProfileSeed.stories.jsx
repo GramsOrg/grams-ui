@@ -1,15 +1,14 @@
 import React from 'react';
 
 import { action } from "@storybook/addon-actions";
-import Content from './Terms.md';
 
-import Terms from './Terms.tsx';
+import ProfileSeed from './ProfileSeed.tsx';
 
 export default {
-  title: 'Onboarding/Terms',
-  component: Terms,
+  title: 'Onboarding/ProfileSeed',
+  component: ProfileSeed,
   parameters: {
-    componentSubtitle: 'Displays and prompts the user to agree to the terms of use',
+    componentSubtitle: 'Displays the 24-word seed to the user and prompts to accept securing the seed',
     storyshots: { disable: false },
   },
   argTypes: {
@@ -23,12 +22,14 @@ export default {
   }
 };
 
+const seed = 'hello world again potato tomato whisper galal cloud profile oscar eleven twelve thirteen amazing great hungry available option bamya lorem ipsum dictionary developer snapshot';
+
 const Template = ({dir, inverted, ...props}) => {
   return (
-    <Terms
+    <ProfileSeed
       dir={dir}
       inverted={inverted}
-      onAccept={action("Trigger onAccept()")}
+      seed={seed}
       {...props}
     />
   );
@@ -37,13 +38,11 @@ const Template = ({dir, inverted, ...props}) => {
 export const Default = Template.bind({});
 Default.args = {
   dir: 'ltr',
-  content: Content,
   inverted: false
 }
 
 export const RTL = Template.bind({});
 RTL.args = {
   dir: 'rtl',
-  content: Content,
   inverted: false
 }

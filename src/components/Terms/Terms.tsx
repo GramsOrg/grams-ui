@@ -21,7 +21,7 @@ export interface ITermsProps {
   /**
    * The markdown content to be rendered as the terms of use.
    */
-  content?: string;
+  content: string;
 
   /**
    * The size of the terms container.

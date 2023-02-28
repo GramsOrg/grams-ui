@@ -6,11 +6,11 @@ import React from 'react';
 import { describe, expect, test } from '@jest/globals';
 import { render } from '@testing-library/react';
 
-import Terms from './Terms';
+import GramsIcon from './GramsIcon';
 
-describe('Terms Component', () => {
+describe('GramsIcon Component', () => {
   test('it should match the snapshot', () => {
-    const { asFragment } = render(<Terms content='any' />);
+    const { asFragment } = render(<GramsIcon name='world' />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

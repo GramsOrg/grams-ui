@@ -6,11 +6,11 @@ import React from 'react';
 import { describe, expect, test } from '@jest/globals';
 import { render } from '@testing-library/react';
 
-import CreateProfileOptions from './CreateProfileOptions';
+import ProfileSeed from './ProfileSeed';
 
-describe('CreateProfileOptions Component', () => {
+describe('ProfileSeed Component', () => {
   test('it should match the snapshot', () => {
-    const { asFragment } = render(<CreateProfileOptions />);
+    const { asFragment } = render(<ProfileSeed seed='any' />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

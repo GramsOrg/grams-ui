@@ -1,0 +1,11 @@
+.middle {
+    vertical-align: middle !important;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.rtl-content {
+    padding-right: 1em !important;
+}

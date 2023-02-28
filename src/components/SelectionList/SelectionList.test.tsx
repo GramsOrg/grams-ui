@@ -6,11 +6,11 @@ import React from 'react';
 import { describe, expect, test } from '@jest/globals';
 import { render } from '@testing-library/react';
 
-import Terms from './Terms';
+import SelectionList from './SelectionList';
 
-describe('Terms Component', () => {
+describe('SelectionList Component', () => {
   test('it should match the snapshot', () => {
-    const { asFragment } = render(<Terms content='any' />);
+    const { asFragment } = render(<SelectionList />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

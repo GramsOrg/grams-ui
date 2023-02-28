@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileSeed Component it should match the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ui basic segment"
+  >
+    <div
+      class="ui centered three column grid"
+    >
+      <div
+        class="column"
+      >
+        <div>
+          any
+        </div>
+      </div>
+    </div>
+    <div
+      class="ui checkbox"
+    >
+      <input
+        class="hidden"
+        readonly=""
+        tabindex="0"
+        type="checkbox"
+        value=""
+      />
+      <label>
+        I understand that Grams will not be able to show me this seed again and that I have saved it in a secure place
+      </label>
+    </div>
+    <button
+      class="ui fluid primary disabled button"
+      disabled=""
+      tabindex="-1"
+    >
+      Continue
+    </button>
+  </div>
+</DocumentFragment>
+`;
