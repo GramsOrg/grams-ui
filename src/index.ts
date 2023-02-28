@@ -6,12 +6,4 @@ import SelectProfile from './components/SelectProfile';
 import SelectionList from './components/SelectionList';
 import Terms from './components/Terms';
 
-export {
-  CreateProfile,
-  GramsIcon,
-  ProfileSeed,
-  SelectLocale,
-  SelectProfile,
-  SelectionList,
-  Terms,
-};
+export { CreateProfile, GramsIcon, ProfileSeed, SelectLocale, SelectProfile, SelectionList, Terms };

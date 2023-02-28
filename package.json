@@ -1,6 +1,6 @@
 {
   "name": "grams-ui",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "A collection of UI components used across grams applications",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
