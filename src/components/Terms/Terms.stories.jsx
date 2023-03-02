@@ -13,20 +13,15 @@ export default {
     storyshots: { disable: false },
   },
   argTypes: {
-    dir: {
-      control: 'radio',
-      options: ['ltr', 'rtl']
-    },
     inverted: {
       control: 'boolean'
     }
   }
 };
 
-const Template = ({dir, inverted, ...props}) => {
+const Template = ({inverted, ...props}) => {
   return (
     <Terms
-      dir={dir}
       inverted={inverted}
       onAccept={action("Trigger onAccept()")}
       {...props}
@@ -36,14 +31,6 @@ const Template = ({dir, inverted, ...props}) => {
 
 export const Default = Template.bind({});
 Default.args = {
-  dir: 'ltr',
-  content: Content,
-  inverted: false
-}
-
-export const RTL = Template.bind({});
-RTL.args = {
-  dir: 'rtl',
   content: Content,
   inverted: false
 }

@@ -1,0 +1,15 @@
+.max-height {
+    height: 100%;
+}
+
+.layout {
+    max-width: 450px;
+}
+
+.ltr {
+    text-align: left;
+}
+
+.rtl {
+    text-align: left;
+}

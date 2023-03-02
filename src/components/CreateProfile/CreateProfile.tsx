@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 
+import { useTranslation } from 'react-i18next';
 
-import { Accordion, Button, Form, Icon, Input, Label, Message, Progress } from 'semantic-ui-react';
+import { useDirection } from 'grams-common';
+
+import { Accordion, Button, Form, Header, Icon, Input, Label, Message, Progress } from 'semantic-ui-react';
 
 import './CreateProfile.css';
 
 export interface ICreateProfileProps {
-
-  /**
-   * Defines the direction of the component
-   */
-  dir?: 'ltr' | 'rtl';
 
   /**
    * Toggles between light and dark modes
@@ -18,34 +16,9 @@ export interface ICreateProfileProps {
   inverted?: boolean;
 
   /**
-   * The label for the name input field.
+   * Enables/disables form validation
    */
-  nameLabel?: string;
-
-  /**
-   * The label for the password input field.
-   */
-  passwordLabel?: string;
-
-  /**
-   * The label for the confirm password input field.
-   */
-  confirmPasswordLabel?: string;
-
-  /**
-   * The label for the advanced options accordion.
-   */
-  advancedOptionsLabel?: string;
-
-  /**
-   * The label for the developer options checkbox.
-   */
-  developerLabel?: string;
-
-  /**
-   * The label for the create profile button.
-   */
-  createProfileLabel?: string;
+  validate?: boolean;
 
   /**
    * The callback function to be called when the user creates a profile.
@@ -53,21 +26,18 @@ export interface ICreateProfileProps {
    * @param {string} password - The user's password.
    * @param {boolean} isDeveloper - If the user opted for developer mode
    */
-  onCreateProfile?: (name: string, password: string, isDeveloper: boolean) => void;
+  onCreate?: (name: string, password: string, isDeveloper: boolean) => void;
 }
 
 const defaultProps = {
-  dir: 'ltr',
   inverted: false,
-  nameLabel: 'Name',
-  passwordLabel: 'Password',
-  confirmPasswordLabel: 'Confirm password',
-  createProfileLabel: 'Create Profile',
-  advancedOptionsLabel: 'Advanced options',
-  developerLabel: 'Enable developer mode'
+  validate: true
 };
 
 const CreateProfile = (props: ICreateProfileProps) => {
+
+  const { t } = useTranslation();
+  const direction = useDirection();
 
   const [name, setName] = useState<string>('');
   const [password, setPassword] = useState<string>('');
@@ -75,19 +45,20 @@ const CreateProfile = (props: ICreateProfileProps) => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [developerMode, setDeveloperMode] = useState<boolean>(false);
 
-  const position: 'left' | undefined = props.dir === 'ltr' ? 'left' : undefined;
+  const position: 'left' | undefined = direction === 'ltr' ? 'left' : undefined;
 
   const isValid = (): boolean => {
-    return false;
+    return !props.validate || false;
   }
 
   return (
     <Form>
+      <Header className='centered' as="h2">{t('CreateProfile.title')}</Header>
       <Form.Input
         fluid
         icon='user'
         iconPosition={position}
-        placeholder={props.nameLabel}
+        placeholder={t('CreateProfile.name')}
         value={name}
         onChange={ (e) => setName(e.target.value) }
       />
@@ -95,7 +66,7 @@ const CreateProfile = (props: ICreateProfileProps) => {
         fluid
         icon='key'
         iconPosition={position}
-        placeholder={props.passwordLabel}
+        placeholder={t('CreateProfile.password')}
         value={password}
         onChange={ (e) => setPassword(e.target.value) }
       />
@@ -103,7 +74,7 @@ const CreateProfile = (props: ICreateProfileProps) => {
         fluid
         icon='key'
         iconPosition={position}
-        placeholder={props.confirmPasswordLabel}
+        placeholder={t('CreateProfile.confirmPassword')}
         value={confirmPassword}
         onChange={ (e) => setConfirmPassword(e.target.value) }
       />
@@ -112,8 +83,9 @@ const CreateProfile = (props: ICreateProfileProps) => {
           type="submit"
           primary
           disabled={!isValid()}
+          onClick={() => props?.onCreate?.(name, password, developerMode)}
         >
-          {props.createProfileLabel}
+          {t('CreateProfile.create')}
         </Button>
     </Form>
   );

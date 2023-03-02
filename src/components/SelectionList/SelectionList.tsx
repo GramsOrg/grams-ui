@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { useDirection } from 'grams-common';
+
 import { Icon, List, SemanticICONS, SemanticCOLORS } from 'semantic-ui-react';
 
 import './SelectionList.css';
@@ -22,47 +24,30 @@ export interface SelectionOption {
  */
 export interface ISelectionListProps {
 
-  /**
-   * Defines the direction of the component
-   */
-  dir?: 'ltr' | 'rtl';
-
-  /**
-   * Toggles between light and dark modes
-   */
-  inverted?: boolean;
-
   /** 
    * A list of options for the user to choose from.
    */
-  options?: SelectionOption[];
+  options: SelectionOption[];
 
   /**
    * A callback function to be called when an option is selected.
    */
-  onSelect?: (option: SelectionOption) => void;
+  onSelect?: (option: string) => void;
 }
 
 const defaultProps = {
-  dir: 'ltr',
-  inverted: false,
-  options: [{
-    id: 'test',
-    title: 'Hello',
-    description: 'start now',
-    icon: 'world',
-    color: 'blue'
-  }]
 };
 
 const SelectionList = (props: ISelectionListProps) => {
 
+  const direction = useDirection();
+
   return (
-    <List relaxed='very' selection className={props.dir}>
+    <List relaxed='very' selection className={direction}>
       {props?.options?.map((option) => (
         <List.Item
           key={option.id}
-          onClick={() => props?.onSelect?.(option)}
+          onClick={() => props?.onSelect?.(option.id)}
         >
           <Icon 
             className='middle'
@@ -70,7 +55,7 @@ const SelectionList = (props: ISelectionListProps) => {
             name={option.icon}
             color={option.color}
           />
-          <List.Content className={`${props.dir}-content`}>
+          <List.Content className={`${direction}-content`}>
             <List.Header as='h2'>{option.title}</List.Header>
             <List.Description>{option.description}</List.Description>
           </List.Content>

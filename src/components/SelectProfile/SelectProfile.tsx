@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { Profile } from 'grams-common';
+import { useTranslation } from 'react-i18next';
+
+import { Profile, useDirection } from 'grams-common';
 
 import { Label, List } from 'semantic-ui-react';
 import Avatar from 'react-avatar';
@@ -13,11 +15,6 @@ export interface IProfileItemsProps {
 }
 
 export interface ISelectProfileProps {
-
-  /**
-   * Defines the direction of the component
-   */
-  dir?: 'ltr' | 'rtl';
 
   /**
    * List of profiles that will be displayed
@@ -41,19 +38,21 @@ export interface ISelectProfileProps {
 }
 
 const defaultProps = {
-  dir: 'ltr',
   horizontal: false
 };
 
 const SelectProfile = (props: ISelectProfileProps) => {
+
+  const { t } = useTranslation();
+  const direction = useDirection();
 
   return (
     <List
       horizontal={ props?.horizontal || false }
       relaxed
       size="big"
-      className="centered top"
-      dir={ props?.dir }
+      className={`centered top`}
+      dir={direction}
     >
       <ProfileItems
         profiles={props?.profiles}
@@ -65,15 +64,19 @@ const SelectProfile = (props: ISelectProfileProps) => {
           size="64"
           round
           color='teal'
-          title="New"
+          title={t('SelectProfile.new')}
           className="avatar"
         />
+        <List.Header>{t('SelectProfile.new')}</List.Header>
       </List.Item>
     </List>
   );
 };
 
 const ProfileItems = (props: IProfileItemsProps) => {
+
+  const { t } = useTranslation();
+
   return (
     <>
       {props?.profiles?.map(profile => (
@@ -93,7 +96,7 @@ const ProfileItems = (props: IProfileItemsProps) => {
           <List.Content>
           {profile.isDeveloper && (
             <Label color="blue" size="mini">
-              {'</>'}
+              {t('SelectProfile.dev')}
             </Label>
           )}
           </List.Content>

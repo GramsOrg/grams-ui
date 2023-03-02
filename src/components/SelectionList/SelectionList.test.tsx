@@ -10,7 +10,13 @@ import SelectionList from './SelectionList';
 
 describe('SelectionList Component', () => {
   test('it should match the snapshot', () => {
-    const { asFragment } = render(<SelectionList />);
+    const { asFragment } = render(<SelectionList options={[{
+      id: 'test',
+      title: 'Hello',
+      description: 'start now',
+      icon: 'world',
+      color: 'blue'
+    }]} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

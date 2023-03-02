@@ -12,21 +12,15 @@ export default {
     storyshots: { disable: false },
   },
   argTypes: {
-    dir: {
-      control: 'radio',
-      defaultValue: 'ltr',
-      options: ['ltr', 'rtl']
-    },
     horizontal: {
       control: 'boolean'
     }
   }
 };
 
-const Template = ({dir, ...props}) => {
+const Template = ({ ...props }) => {
   return (
     <SelectProfile
-      dir={dir}
       {...props}
       onCreate={action("Trigger onCreate()")}
     />
@@ -35,7 +29,6 @@ const Template = ({dir, ...props}) => {
 
 export const Default = Template.bind({});
 Default.args = {
-  dir: 'ltr'
 }
 
 const profiles = [
@@ -46,28 +39,19 @@ const profiles = [
   }, {
     id: "second",
     name: "Jenny",
+    isDeveloper: true,
     avatarUrl: "https://react.semantic-ui.com/images/avatar/large/jenny.jpg"
   }
 ]
 
 export const Populated = Template.bind({});
 Populated.args = {
-  dir: 'ltr',
   profiles: profiles,
   onSelect: action("Trigger onSelect()")
 }
 
 export const Horizontal = Template.bind({});
 Horizontal.args = {
-  dir: 'ltr',
-  horizontal: true,
-  profiles: profiles,
-  onSelect: action("Trigger onSelect()")
-}
-
-export const RTL = Template.bind({});
-RTL.args = {
-  dir: 'rtl',
   horizontal: true,
   profiles: profiles,
   onSelect: action("Trigger onSelect()")

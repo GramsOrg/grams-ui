@@ -12,12 +12,6 @@ export default {
     storyshots: { disable: false },
   },
   argTypes: {
-    inverted: {
-      control: 'boolean'
-    },
-    centered: {
-      control: 'boolean'
-    },
     fluid: {
       control: 'boolean'
     }
@@ -38,11 +32,4 @@ const Template = ({inverted, ...props}) => {
 export const Default = Template.bind({});
 Default.args = {
   inverted: false
-}
-
-export const Centered = Template.bind({});
-Centered.args = {
-  inverted: false,
-  centered: true,
-  fluid: false
 }

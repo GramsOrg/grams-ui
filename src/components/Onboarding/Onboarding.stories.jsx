@@ -2,13 +2,13 @@ import React from 'react';
 
 import { action } from "@storybook/addon-actions";
 
-import CreateProfile from './CreateProfile.tsx';
+import Onboarding from './Onboarding.tsx';
 
 export default {
-  title: 'Onboarding/CreateProfile',
-  component: CreateProfile,
+  title: 'Flows/Onboarding',
+  component: Onboarding,
   parameters: {
-    componentSubtitle: 'Displays a form for the user to create their profile',
+    componentSubtitle: 'An end-to-end onboarding flow for creating a Grams profile',
     storyshots: { disable: false },
   },
   argTypes: {
@@ -20,9 +20,12 @@ export default {
 
 const Template = ({inverted, ...props}) => {
   return (
-    <CreateProfile
+    <Onboarding
       inverted={inverted}
       onCreate={action("Trigger onCreate()")}
+      onImportBackup={action("Trigger onImportBackup()")}
+      onImportSeed={action("Trigger onImportSeed()")}
+      onLedger={action("Trigger onLedger()")}
       {...props}
     />
   );

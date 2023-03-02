@@ -8,7 +8,8 @@ module.exports = {
       "@storybook/addon-essentials",
       '@storybook/addon-docs',
       '@storybook/addon-storysource',
-      '@storybook/addon-controls'
+      '@storybook/addon-controls',
+      'storybook-react-i18next'
     ],
     "features": {
       storyStoreV7: true

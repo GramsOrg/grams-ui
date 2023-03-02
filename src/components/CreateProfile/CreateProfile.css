@@ -6,3 +6,7 @@
     direction: rtl;
     text-align: right;
 }
+
+.centered {
+    text-align: center;
+}

@@ -1,14 +1,13 @@
 // component.tsx
 exports.component = name => `import React from 'react';
 
+import { useTranslation } from 'react-i18next';
+
+import { useDirection } from 'grams-common';
+
 import './${name}.css';
 
 export interface I${name}Props {
-
-  /**
-   * Defines the direction of the component
-   */
-  dir?: 'ltr' | 'rtl';
 
   /**
    * Toggles between light and dark modes
@@ -17,11 +16,13 @@ export interface I${name}Props {
 }
 
 const defaultProps = {
-  dir: 'ltr',
   inverted: false
 };
 
 const ${name} = (props: I${name}Props) => {
+
+  const { t } = useTranslation();
+  const direction = useDirection();
 
   return (
     <>
@@ -33,6 +34,11 @@ ${name}.defaultProps = defaultProps;
 
 export default ${name};
 `;
+
+// component.css
+exports.css = name => `
+
+`
 
 // component.stories.jsx
 exports.story = name => `import React from 'react';
@@ -47,23 +53,12 @@ export default {
   parameters: {
     componentSubtitle: 'Component description',
     storyshots: { disable: false },
-  },
-  argTypes: {
-    dir: {
-      control: 'radio',
-      options: ['ltr', 'rtl']
-    },
-    inverted: {
-      control: 'boolean'
-    }
   }
 };
 
-const Template = ({dir, inverted, ...props}) => {
+const Template = ({ ...props }) => {
   return (
     <${name}
-      dir={dir}
-      inverted={inverted}
       {...props}
     />
   );
@@ -71,14 +66,6 @@ const Template = ({dir, inverted, ...props}) => {
 
 export const Default = Template.bind({});
 Default.args = {
-  dir: 'ltr',
-  inverted: false
-}
-
-export const RTL = Template.bind({});
-RTL.args = {
-  dir: 'rtl',
-  inverted: false
 }
 `;
 
