@@ -7,7 +7,6 @@ import SelectLocale from './components/SelectLocale';
 import SelectProfile from './components/SelectProfile';
 import SelectionList from './components/SelectionList';
 import Terms from './components/Terms';
-import { i18n, Profile, Account } from './components/{ i18n, Profile, Account }';
 
 export {
   CreateProfile,
@@ -18,6 +17,5 @@ export {
   SelectLocale,
   SelectProfile,
   SelectionList,
-  Terms,
-  { i18n, Profile, Account },
+  Terms
 };
