@@ -21,5 +21,5 @@ export {
   SelectLocale,
   SelectProfile,
   SelectionList,
-  Terms
+  Terms,
 };
