@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useDirection } from 'grams-common';
+import { useDirection } from '../../';
 
 import { Icon, List, SemanticICONS, SemanticCOLORS } from 'semantic-ui-react';
 

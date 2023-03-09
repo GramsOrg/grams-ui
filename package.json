@@ -73,8 +73,9 @@
   },
   "dependencies": {
     "@loadable/component": "^5.15.3",
-    "grams-common": "^0.1.6",
+    "i18next": "^22.4.11",
     "react-avatar": "^5.0.3",
+    "react-i18next": "^12.2.0",
     "react-icons": "^4.7.1",
     "react-markdown": "^8.0.5",
     "semantic-ui-react": "^2.1.4"

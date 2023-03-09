@@ -1,3 +1,3 @@
-import { i18n } from 'grams-common';
+import { i18n } from '../';
 
 export default i18n;

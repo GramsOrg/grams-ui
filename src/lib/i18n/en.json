@@ -1,0 +1,65 @@
+{
+    "translation": {
+      "SelectProfile": {
+        "new": "New",
+        "dev": "DEV"
+      },
+      "SelectLocale": {
+        "select": "Select language",
+        "confirm": "Select"
+      },
+      "Terms": {
+        "checkbox": "I have read and agree to the terms of use.",
+        "confirm": "Agree"
+      },
+      "ProfileOptions": {
+        "new": {
+          "title": "Create new profile",
+          "description": "Start a new profile from scratch"
+        },
+        "backup": {
+          "title": "Import profile backup",
+          "description": "Import a .grams backup file"
+        },
+        "seed": {
+          "title": "Import profile seed",
+          "description": "Import your profile using the 24-word seed"
+        },
+        "ledger": {
+          "title": "Use Ledger wallet",
+          "description": "Pair Grams with your ledger wallet"
+        }
+      },
+      "CreateProfile": {
+        "title": "Create profile",
+        "name": "Name",
+        "password": "Password",
+        "confirmPassword": "Confirm password",
+        "advanced": {
+          "title": "Advanced options",
+          "detail": "Enable developer mode"
+        },
+        "create": "Create"
+      },
+      "newProfile": "New",
+      "dev": "DEV",
+      "selectLanguage": "Select Language",
+      "select": "Select",
+      "agreeTerms": "I have read and agree to the terms of use.",
+      "agree": "Agree",
+      "createProfileTitle": "Create a profile",
+      "createProfileDesc": "You can create as many profiles as you would like later. For now, let's start with the bare minimum.",
+      "passwordreq0": "Your password must:",
+      "passwordreq1": "be at least 8 characters long",
+      "passwordreq2": "contain at least one lowercase letter",
+      "passwordreq3": "contain at least one uppercase letter",
+      "passwordreq4": "contain at least one number",
+      "passwordreq5": "contain at least one special character (!@#$%^&*)",
+      "name": "Name",
+      "password": "Password",
+      "confirmPassword": "Confirm password",
+      "create": "Create",
+      "setupTitle": "Please wait",
+      "setupDesc": "We are getting things ready for you"
+    }
+}

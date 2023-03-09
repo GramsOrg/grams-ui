@@ -1,3 +1,5 @@
+import i18n from './lib/i18n/i18n';
+import useDirection from './lib/hooks/useDirection';
 import CreateProfile from './components/CreateProfile';
 import GramsIcon from './components/GramsIcon';
 import Onboarding from './components/Onboarding';
@@ -9,6 +11,8 @@ import SelectionList from './components/SelectionList';
 import Terms from './components/Terms';
 
 export {
+  i18n,
+  useDirection,
   CreateProfile,
   GramsIcon,
   Onboarding,

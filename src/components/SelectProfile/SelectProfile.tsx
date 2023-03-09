@@ -2,7 +2,9 @@ import React from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { Profile, useDirection } from 'grams-common';
+import { useDirection } from '../../';
+
+import { UserProfile } from '../../types/UserProfile';
 
 import { Label, List } from 'semantic-ui-react';
 import Avatar from 'react-avatar';
@@ -10,8 +12,8 @@ import Avatar from 'react-avatar';
 import './SelectProfile.css';
 
 export interface IProfileItemsProps {
-  profiles?: Profile[];
-  onSelect?: (profile: Profile) => void;
+  profiles?: UserProfile[];
+  onSelect?: (profile: UserProfile) => void;
 }
 
 export interface ISelectProfileProps {
@@ -19,7 +21,7 @@ export interface ISelectProfileProps {
   /**
    * List of profiles that will be displayed
    */
-  profiles?: Profile[];
+  profiles?: UserProfile[];
 
   /**
    * Triggers on user clicking the create button
@@ -29,7 +31,7 @@ export interface ISelectProfileProps {
   /**
    * Triggers on user clicking on a profile
    */
-  onSelect?: (profile: Profile) => void;
+  onSelect?: (profile: UserProfile) => void;
 
   /**
    * Toggles between displaying the profiles horizontally or vertically

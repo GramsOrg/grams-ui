@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { useTranslation } from 'react-i18next';
 
-import { useDirection } from 'grams-common';
+import { useDirection } from '../../';
 
 import ReactMarkdown from 'react-markdown';
 
