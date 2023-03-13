@@ -4,7 +4,7 @@ import { useDirection } from '../../';
 
 import { Icon, List, SemanticICONS, SemanticCOLORS } from 'semantic-ui-react';
 
-import './SelectionList.css';
+import '../../main.css';
 
 /**
  * Interface for the option object used in SelectionList.

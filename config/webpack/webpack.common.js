@@ -1,5 +1,6 @@
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: './src/index.ts',
@@ -9,6 +10,7 @@ module.exports = {
                 from: './src/assets/',
             }],
         }),
+        new MiniCssExtractPlugin(),
     ],
     module: {
         rules: [
@@ -19,7 +21,7 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader'],
             },
             {
               test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,

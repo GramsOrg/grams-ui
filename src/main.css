@@ -1,0 +1,63 @@
+
+/* Custom classes */
+
+.avatar {
+    margin-bottom: 0.3em;
+}
+
+.layout {
+    max-width: 450px;
+}
+
+.rtl-content {
+    padding-right: 1em !important;
+}
+
+/* Position */
+
+.centered {
+    text-align: center;
+    align-items: center;
+}
+
+.middle {
+    vertical-align: middle !important;
+}
+
+.top {
+    vertical-align: top;
+}
+
+.ltr {
+    text-align: left;
+}
+
+.rtl {
+    direction: rtl;
+    text-align: left;
+}
+
+/* Properties */
+
+.scrollable {
+    overflow-y: scroll;
+    margin-bottom: 1em;
+}
+
+/* Size */
+
+.small {
+    height: 200px;
+}
+
+.medium {
+    height: 400px;
+}
+
+.large {
+    height: 600px;
+}
+
+.max-height {
+    height: 100%;
+}

@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { component, css, story, test, barrel } = require('./component_templates.js');
+const { component, story, test, barrel } = require('./component_templates.js');
 
 // grab component name from terminal argument
 const [name] = process.argv.slice(2);
@@ -19,8 +19,6 @@ function writeFileErrorHandler(err) {
 
 // component.tsx
 fs.writeFile(`${dir}/${name}.tsx`, component(name), writeFileErrorHandler);
-// component.scss
-fs.writeFile(`${dir}/${name}.css`, css(name), writeFileErrorHandler);
 // storybook.jsx
 fs.writeFile(`${dir}/${name}.stories.jsx`, story(name), writeFileErrorHandler);
 // test.tsx

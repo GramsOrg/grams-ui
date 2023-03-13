@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { Button, Checkbox, Grid, Segment } from 'semantic-ui-react';
 
-import './ProfileSeed.css';
+import '../../main.css';
 
 export interface IProfileSeedProps {
 

@@ -6,7 +6,7 @@ import { useDirection } from '../../';
 
 import { Accordion, Button, Form, Header, Icon, Input, Label, Message, Progress } from 'semantic-ui-react';
 
-import './CreateProfile.css';
+import '../../main.css';
 
 export interface ICreateProfileProps {
 

@@ -8,7 +8,7 @@ import ReactMarkdown from 'react-markdown';
 
 import { Button, Checkbox, Segment } from 'semantic-ui-react';
 
-import './Terms.css';
+import '../../main.css';
 
 export interface ITermsProps {
 

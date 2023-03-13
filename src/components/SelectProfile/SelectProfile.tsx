@@ -9,7 +9,7 @@ import { UserProfile } from '../../types/UserProfile';
 import { Label, List } from 'semantic-ui-react';
 import Avatar from 'react-avatar';
 
-import './SelectProfile.css';
+import '../../main.css';
 
 export interface IProfileItemsProps {
   profiles?: UserProfile[];

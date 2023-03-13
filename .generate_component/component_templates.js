@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import { useDirection } from 'grams-common';
 
-import './${name}.css';
+import '../../main.css';
 
 export interface I${name}Props {
 
@@ -34,11 +34,6 @@ ${name}.defaultProps = defaultProps;
 
 export default ${name};
 `;
-
-// component.css
-exports.css = name => `
-
-`
 
 // component.stories.jsx
 exports.story = name => `import React from 'react';

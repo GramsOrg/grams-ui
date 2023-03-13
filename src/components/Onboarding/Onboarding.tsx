@@ -10,7 +10,7 @@ import SelectLocale from '../SelectLocale';
 import Terms from '../Terms';
 import ProfileOptions from '../ProfileOptions';
 
-import './Onboarding.css';
+import '../../main.css';
 import CreateProfile from '../CreateProfile';
 
 export interface IOnboardingProps {

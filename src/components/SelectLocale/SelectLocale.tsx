@@ -11,7 +11,7 @@ import {
   Segment
 } from 'semantic-ui-react';
 
-import './SelectLocale.css';
+import '../../main.css';
 
 const defaultLocales: DropdownItemProps[] = [
   { key: 'en', value: 'en', text: 'English' },

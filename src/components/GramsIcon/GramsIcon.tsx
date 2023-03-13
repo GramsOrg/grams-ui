@@ -10,7 +10,7 @@ import {
 } from 'semantic-ui-react';
 
 import SemanticValues from './SemanticValues';
-import './GramsIcon.css';
+import '../../main.css';
 import { IconSizeProp } from 'semantic-ui-react/dist/commonjs/elements/Icon/Icon';
 
 export interface IGramsIconProps {
