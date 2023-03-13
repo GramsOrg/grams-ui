@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileOptions Component it should match the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="ui selection very relaxed list ltr"
+    role="list"
+  >
+    <div
+      class="item"
+      role="listitem"
+    >
+      <i
+        aria-hidden="true"
+        class="black user plus big icon middle"
+      />
+      <div
+        class="content ltr-content"
+      >
+        <h2
+          class="header"
+        >
+          Create new profile
+        </h2>
+        <div
+          class="description"
+        >
+          Start a new profile from scratch
+        </div>
+      </div>
+    </div>
+    <div
+      class="item"
+      role="listitem"
+    >
+      <i
+        aria-hidden="true"
+        class="black upload big icon middle"
+      />
+      <div
+        class="content ltr-content"
+      >
+        <h2
+          class="header"
+        >
+          Import profile backup
+        </h2>
+        <div
+          class="description"
+        >
+          Import a .grams backup file
+        </div>
+      </div>
+    </div>
+    <div
+      class="item"
+      role="listitem"
+    >
+      <i
+        aria-hidden="true"
+        class="black pencil big icon middle"
+      />
+      <div
+        class="content ltr-content"
+      >
+        <h2
+          class="header"
+        >
+          Import profile seed
+        </h2>
+        <div
+          class="description"
+        >
+          Import your profile using the 24-word seed
+        </div>
+      </div>
+    </div>
+    <div
+      class="item"
+      role="listitem"
+    >
+      <i
+        aria-hidden="true"
+        class="black usb big icon middle"
+      />
+      <div
+        class="content ltr-content"
+      >
+        <h2
+          class="header"
+        >
+          Use Ledger wallet
+        </h2>
+        <div
+          class="description"
+        >
+          Pair Grams with your ledger wallet
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

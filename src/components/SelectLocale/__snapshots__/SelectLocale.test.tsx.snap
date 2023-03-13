@@ -3,130 +3,126 @@
 exports[`SelectLocale Component it should match the snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="ui basic segment"
+    class="ui list"
+    role="list"
   >
     <div
-      class="ui list"
-      role="list"
+      class="item mb-small"
+      role="listitem"
     >
       <div
-        class="item mb-small"
-        role="listitem"
+        aria-expanded="false"
+        class="ui fluid selection dropdown"
+        role="listbox"
+        tabindex="0"
       >
         <div
-          aria-expanded="false"
-          class="ui fluid selection dropdown"
-          role="listbox"
-          tabindex="0"
+          aria-atomic="true"
+          aria-live="polite"
+          class="divider default text"
+          role="alert"
+        >
+          SelectLocale.select
+        </div>
+        <i
+          aria-hidden="true"
+          class="dropdown icon"
+        />
+        <div
+          class="menu transition"
         >
           <div
-            aria-atomic="true"
-            aria-live="polite"
-            class="divider default text"
-            role="alert"
+            aria-checked="false"
+            aria-selected="true"
+            class="selected item"
+            role="option"
+            style="pointer-events: all;"
           >
-            Select language
+            <span
+              class="text"
+            >
+              English
+            </span>
           </div>
-          <i
-            aria-hidden="true"
-            class="dropdown icon"
-          />
           <div
-            class="menu transition"
+            aria-checked="false"
+            aria-selected="false"
+            class="item"
+            role="option"
+            style="pointer-events: all;"
           >
-            <div
-              aria-checked="false"
-              aria-selected="true"
-              class="selected item"
-              role="option"
-              style="pointer-events: all;"
+            <span
+              class="text"
             >
-              <span
-                class="text"
-              >
-                English
-              </span>
-            </div>
-            <div
-              aria-checked="false"
-              aria-selected="false"
-              class="item"
-              role="option"
-              style="pointer-events: all;"
+              عربي
+            </span>
+          </div>
+          <div
+            aria-checked="false"
+            aria-selected="false"
+            class="item"
+            role="option"
+            style="pointer-events: all;"
+          >
+            <span
+              class="text"
             >
-              <span
-                class="text"
-              >
-                عربي
-              </span>
-            </div>
-            <div
-              aria-checked="false"
-              aria-selected="false"
-              class="item"
-              role="option"
-              style="pointer-events: all;"
+              Deutsch
+            </span>
+          </div>
+          <div
+            aria-checked="false"
+            aria-selected="false"
+            class="item"
+            role="option"
+            style="pointer-events: all;"
+          >
+            <span
+              class="text"
             >
-              <span
-                class="text"
-              >
-                Deutsch
-              </span>
-            </div>
-            <div
-              aria-checked="false"
-              aria-selected="false"
-              class="item"
-              role="option"
-              style="pointer-events: all;"
+              Français
+            </span>
+          </div>
+          <div
+            aria-checked="false"
+            aria-selected="false"
+            class="item"
+            role="option"
+            style="pointer-events: all;"
+          >
+            <span
+              class="text"
             >
-              <span
-                class="text"
-              >
-                Français
-              </span>
-            </div>
-            <div
-              aria-checked="false"
-              aria-selected="false"
-              class="item"
-              role="option"
-              style="pointer-events: all;"
+              Español
+            </span>
+          </div>
+          <div
+            aria-checked="false"
+            aria-selected="false"
+            class="item"
+            role="option"
+            style="pointer-events: all;"
+          >
+            <span
+              class="text"
             >
-              <span
-                class="text"
-              >
-                Español
-              </span>
-            </div>
-            <div
-              aria-checked="false"
-              aria-selected="false"
-              class="item"
-              role="option"
-              style="pointer-events: all;"
-            >
-              <span
-                class="text"
-              >
-                中文
-              </span>
-            </div>
+              中文
+            </span>
           </div>
         </div>
       </div>
-      <div
-        class="item"
-        role="listitem"
+    </div>
+    <div
+      class="item"
+      role="listitem"
+    >
+      <button
+        class="ui fluid primary disabled button"
+        disabled=""
+        tabindex="-1"
       >
-        <button
-          class="ui fluid primary disabled button"
-          disabled=""
-          tabindex="-1"
-        >
-          Select
-        </button>
-      </div>
+        SelectLocale.confirm
+      </button>
     </div>
   </div>
 </DocumentFragment>

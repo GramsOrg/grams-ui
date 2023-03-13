@@ -5,6 +5,11 @@ exports[`CreateProfile Component it should match the snapshot 1`] = `
   <form
     class="ui form"
   >
+    <h2
+      class="ui header centered"
+    >
+      Create profile
+    </h2>
     <div
       class="field"
     >
@@ -62,7 +67,7 @@ exports[`CreateProfile Component it should match the snapshot 1`] = `
       tabindex="-1"
       type="submit"
     >
-      Create Profile
+      Create
     </button>
   </form>
 </DocumentFragment>
