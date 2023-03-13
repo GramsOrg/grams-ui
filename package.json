@@ -57,6 +57,7 @@
     "@types/jest": "^29.4.0",
     "@types/loadable__component": "^5.13.4",
     "@types/storybook__react": "^5.2.1",
+    "awesome-typescript-loader": "^5.2.1",
     "codecov": "^3.8.3",
     "copy-webpack-plugin": "^11.0.0",
     "cross-env": "^7.0.3",
@@ -80,7 +81,8 @@
     "webpack": "^5.76.1",
     "webpack-cli": "^5.0.1",
     "webpack-dev-server": "^4.11.1",
-    "webpack-merge": "^5.8.0"
+    "webpack-merge": "^5.8.0",
+    "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
     "@loadable/component": "^5.15.3",

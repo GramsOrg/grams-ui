@@ -1,9 +1,11 @@
 const path = require('path');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
     entry: './src/index.ts',
+    externals: [nodeExternals()],
     plugins: [
         new CopyPlugin({
             patterns: [{
@@ -21,7 +23,15 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader'],
+                use: [ 
+                  {
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        esModule: false,
+                    },
+                  },
+                  'css-loader'
+                ],
             },
             {
               test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
@@ -39,6 +49,8 @@ module.exports = {
     output: {
       filename: 'index.js',
       path: path.resolve(__dirname, '../../', 'dist'),
-      clean: true,
+      libraryTarget: 'umd',
+      library: 'grams-ui',
+      umdNamedDefine: true,
     },
 };
